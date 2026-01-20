@@ -1,5 +1,6 @@
 <Solution>
   <Project Path="AzureWebApi/AzureWebApi.csproj" />
   <Project Path="Data/Data.csproj" />
-  <Project Path="Logic/Logic.csproj" />
+  <Project Path="Logic.Services/Logic.Services.csproj" Id="648a6a9e-3cff-46d6-b72e-b3e70037ffad" />
+  <Project Path="Logic/Logic.Interfaces.csproj" />
 </Solution>
