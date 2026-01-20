@@ -5,6 +5,7 @@ using AzureWebApi.Mapping;
 using Data;
 using Logic;
 using Logic.Interfaces.Handlers;
+using Logic.Interfaces.Interfaces;
 using Logic.Services;
 using Mapster;
 using MapsterMapper;
@@ -28,7 +29,6 @@ namespace AzureWebApi
             builder.Services.Configure<KeyVaultSettings>(
                 builder.Configuration.GetSection("KeyVault"));
 
-            
 
             // Configure the HTTP request pipeline.
             
@@ -51,6 +51,7 @@ namespace AzureWebApi
             TypeAdapterConfig.GlobalSettings.Scan(typeof(MappingConfig).Assembly);
             builder.Services.AddSingleton(TypeAdapterConfig.GlobalSettings);
             builder.Services.AddScoped<IMapper, ServiceMapper>();
+            builder.Services.AddScoped<IAzureTopicService, AzureTopicService>();
 
             builder.Services.AddMediatR(cfg =>
             {

@@ -7,5 +7,4 @@ public class KeyVaultSettings
     public string SqlConnectionStringName { get; set; }
     public string MediatrKeyName { get; set; }
     public string ServiceBusConnectionStringName { get; set; }
-
 }
